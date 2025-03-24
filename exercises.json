@@ -1,0 +1,279 @@
+{
+  "Lower Body (Quad and Glute Focused)": [
+    {
+      "exercise": "Goblet Squat",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Kettlebell Squat (DB Squat)",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Off-Set Squat",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Sumo Squat",
+      "muscles_worked": ["Quads", "Glutes", "Adductors", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Bulgarian Split Squat",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Front Foot Elevated Split Squat",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Reverse Lunge",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Step Up",
+      "muscles_worked": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Side Lunge (Lateral Lunge)",
+      "muscles_worked": ["Quads", "Glutes", "Adductors", "Hamstrings", "Core"],
+      "type": "Compound"
+    }
+  ],
+  "Lower Body (Hamstring and Glute Focused)": [
+    {
+      "exercise": "RDL (Romanian Deadlift)",
+      "muscles_worked": ["Hamstrings", "Glutes", "Lower Back", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Hip Thrust",
+      "muscles_worked": ["Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "B-Stance RDL",
+      "muscles_worked": ["Hamstrings", "Glutes", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Single Leg RDL",
+      "muscles_worked": ["Hamstrings", "Glutes", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Single Leg Hip Thrust",
+      "muscles_worked": ["Glutes", "Hamstrings", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "BOSU Hamstring Curl",
+      "muscles_worked": ["Hamstrings", "Glutes", "Core"],
+      "type": "Isolation"
+    }
+  ],
+  "Lower Body (Glute/Abductor Focused)": [
+    {
+      "exercise": "Monster Walk",
+      "muscles_worked": ["Glute Medius", "Hip Abductors"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Banded Lateral Walk",
+      "muscles_worked": ["Glute Medius", "Hip Abductors"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Donkey Kicks",
+      "muscles_worked": ["Glutes (primarily Glute Max)"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Fire Hydrants",
+      "muscles_worked": ["Glute Medius", "Hip Abductors"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Clam Shell",
+      "muscles_worked": ["Glute Medius", "Hip Abductors"],
+      "type": "Isolation"
+    }
+  ],
+  "Upper Body (Chest, Shoulders, Triceps)": [
+    {
+      "exercise": "Chest Press",
+      "muscles_worked": ["Chest", "Shoulders", "Triceps"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Incline Chest Press",
+      "muscles_worked": ["Upper Chest", "Shoulders", "Triceps"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Push Ups",
+      "muscles_worked": ["Chest", "Shoulders", "Triceps", "Core"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Chest Fly",
+      "muscles_worked": ["Chest (Pectorals)"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Shoulder Press",
+      "muscles_worked": ["Shoulders (Deltoids)", "Triceps", "Upper Chest (secondary)"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Standing or Floor-Seated Shoulder Press",
+      "muscles_worked": ["Shoulders (Deltoids)", "Triceps", "Core (stabilization)"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Lateral Raises",
+      "muscles_worked": ["Lateral (Middle) Deltoids"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Overhead Tricep Extension",
+      "muscles_worked": ["Triceps"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Skull Crusher",
+      "muscles_worked": ["Triceps"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Bench Dips",
+      "muscles_worked": ["Triceps", "Chest", "Shoulders"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Seated Reverse Fly",
+      "muscles_worked": ["Rear Deltoids", "Upper Back (Rhomboids/Traps to stabilize)"],
+      "type": "Isolation"
+    }
+  ],
+  "Upper Body (Back and Biceps)": [
+    {
+      "exercise": "Single Arm Bent Over Row",
+      "muscles_worked": ["Lats", "Rhomboids", "Traps", "Biceps", "Forearms", "Core (stabilization)"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Quadruped Row",
+      "muscles_worked": ["Lats", "Upper Back", "Biceps", "Core (anti-rotation)"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Chest Supported Row",
+      "muscles_worked": ["Lats", "Upper Back (Rhomboids/Traps)", "Biceps"],
+      "type": "Compound"
+    },
+    {
+      "exercise": "Lat Pull-Over",
+      "muscles_worked": ["Lats (primary)", "Pecs (secondary)", "Triceps (secondary)"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Y's, T's, W's",
+      "muscles_worked": ["Upper Back", "Lower Traps", "Posterior Shoulders", "Scapular Stabilizers"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Bicep Curls",
+      "muscles_worked": ["Biceps (Brachii)"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Hammer Curls",
+      "muscles_worked": ["Biceps (Brachialis emphasis)", "Forearms"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Static Bicep Curl",
+      "muscles_worked": ["Biceps", "Forearms"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Renegade Row",
+      "muscles_worked": ["Lats", "Upper Back", "Biceps", "Core (anti-rotation)", "Shoulders"],
+      "type": "Compound"
+    }
+  ],
+  "Core": [
+    {
+      "exercise": "Deadbugs (Weighted or Unweighted)",
+      "muscles_worked": ["Abs", "Hip Flexors", "Lower Back Stabilizers"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Plank",
+      "muscles_worked": ["Abs", "Lower Back", "Shoulders", "Glutes (stabilizing)"],
+      "type": "Isolation (Isometric)"
+    },
+    {
+      "exercise": "Bear Hold",
+      "muscles_worked": ["Core", "Shoulders", "Hips (stabilization)"],
+      "type": "Isolation (Isometric)"
+    },
+    {
+      "exercise": "Bear Hold Pull Through",
+      "muscles_worked": ["Core (anti-rotation)", "Shoulders", "Arms"],
+      "type": "Core-Focused (often treated as Compound, but generally Isolation)"
+    },
+    {
+      "exercise": "DB Rotations",
+      "muscles_worked": ["Obliques", "Abs"],
+      "type": "Isolation (Rotational Core)"
+    },
+    {
+      "exercise": "Weighted SL Lowers",
+      "muscles_worked": ["Abs (Lower Emphasis)", "Hip Flexors"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Alternating V-Up",
+      "muscles_worked": ["Abs (Rectus Abdominis)", "Hip Flexors"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "V-Up",
+      "muscles_worked": ["Abs (Rectus Abdominis)", "Hip Flexors"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Russian Twist",
+      "muscles_worked": ["Obliques", "Abs"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Overhead Weighted Sit-Up",
+      "muscles_worked": ["Abs (Rectus Abdominis)", "Shoulders (stabilizing)"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Toe Reaches",
+      "muscles_worked": ["Abs (Upper Portion Emphasis)"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Side Plank Twist",
+      "muscles_worked": ["Obliques", "Lateral Core"],
+      "type": "Isolation"
+    },
+    {
+      "exercise": "Copenhagen Plank",
+      "muscles_worked": ["Adductors (Inner Thigh)", "Obliques", "Core"],
+      "type": "Isolation (Isometric)"
+    }
+  ]
+}
