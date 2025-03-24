@@ -273,7 +273,7 @@
 
       // We'll monkey-patch our own shuffle that uses nextSeed
       // to scramble array in a consistent way.
-      function seededShuffle(arr, sObj) {
+      function seededShuffle(arr) {
         // Make a copy
         const newArr = arr.slice();
         for (let i = newArr.length - 1; i > 0; i--) {
@@ -330,7 +330,6 @@
           const unilateralPool = UPPER_BODY_COMPOUND.filter(ex => ex.unilateral);
           // Unilateral pick
           upperCompound[upperCompound.length - 1] = getRandomExercisesSeeded(unilateralPool, 1)[0];
-          ;
         }
         const finalUpperCompound = upperCompound.slice(0, 3);
 
