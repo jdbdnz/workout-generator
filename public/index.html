@@ -54,475 +54,455 @@
     // region exercises
     const EXERCISES = {
       "Lower": {
-        "Quad and glute": {
-          "compound": [
-            {
-              "exercise": "Goblet squat",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "quads, glutes",
-              "dezzy": "50lbs",
-              "noraa": "30lbs",
-            },
-            {
-              "exercise": "Kettlebell squat (Can also be done with DB)",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "quads, glutes",
-              "dezzy": "70lbs",
-              "noraa": "50lbs",
-            },
-            {
-              "exercise": "Off set squat",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "quads, glutes",
-              "note": "We haven't done these but will be good to add-in."
-            },
-            {
-              "exercise": "Sumo squat (also hits adductors)",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "quads, glutes, abductors",
-              "dezzy": "70lbs",
-              "noraa": "45lbs",
-            },
-            {
-              "exercise": "Bulgarian split squat",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "quads, glutes",
-              "dezzy": "60lbs (30s in each hand)",
-              "noraa": "24lbs (12s in each hand)",
-            },
-            {
-              "exercise": "Front foot elevated split squat",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "quads, glutes",
-              "note": "We haven't done these but will be good to add-in."
-            },
-            {
-              "exercise": "Reverse lunge",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "quads, glutes",
-              "dezzy": "50lbs (25lbs in each hand)",
-              "noraa": "25lbs",
-            },
-            {
-              "exercise": "Step up",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "quads, glutes",
-              "dezzy": "45lbs",
-              "noraa": "25lbs",
-            },
-            {
-              "exercise": "Side lunge (also hits adductors)",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "quads, glutes, adductors",
-              "dezzy": "50lbs",
-              "noraa": "35lbs",
-            }
-          ]
-        },
-        "Hamstring and glute": {
-          "compound": [
-            {
-              "exercise": "RDL",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "hamstrings, glutes",
-              "noraa": "50lbs (25s in each hand)",
-              "note": "@D: Usually we do this with the trap bar. Experiment with lighter weight and high reps to see if you back will tolerate these at home."
-            },
-            {
-              "exercise": "Hip thrust",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "glutes, hamstrings",
-              "dezzy": "55lbs",
-              "noraa": "55lbs",
-              "note": "@D: You can do more weight depending on how your back is feeling"
-            },
-            {
-              "exercise": "B-stance RDL",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "hamstrings, glutes",
-              "noraa": "30lbs",
-              "note": "@D: Back doesn't like these usually but feel free to try light weight to see how it responds"
-            },
-            {
-              "exercise": "Single leg RDL",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "hamstrings, glutes",
-              "noraa": "25lbs",
-              "note": "@D: Back doesn't like these usually but feel free to try light weight to see how it responds"
-            },
-            {
-              "exercise": "Single leg hip thrust",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "glutes, hamstrings",
-              "dezzy": "25lbs",
-              "noraa": "10lbs",
-            }
-          ],
-          "isolated": [
-            {
-              "exercise": "BOSU Hamstring curl",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "hamstrings",
-              "note": "Do higher reps with these"
-            }
-          ]
-        },
-        "Glute/Abductor": {
-          "isolated": [
-            {
-              "exercise": "Monster walk",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "glutes",
-              "dezzy": "Heavy band",
-              "noraa": "Medium Band",
-            },
-            {
-              "exercise": "Banded lateral walk",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "abductors",
-              "dezzy": "Heavy band",
-              "noraa": "Medium Band",
-            },
-            {
-              "exercise": "Donkey Kicks",
-              "targeting": "Isolation",
-              "lateral": "Unilateral",
-              "muscles": "glutes",
-              "dezzy": "Haven't tried but probably heavy",
-              "noraa": "Haven't tried but probably medium",
-              "note": "https://www.youtube.com/watch?v=qegd159vy10"
-            },
-            {
-              "exercise": "Fire hydants",
-              "targeting": "Isolation",
-              "lateral": "Unilateral",
-              "muscles": "abductors",
-              "dezzy": "Haven't tried but probably heavy",
-              "noraa": "Haven't tried but probably medium",
-              "note": "https://www.youtube.com/watch?v=k6WI1adIiHM"
-            },
-            {
-              "exercise": "Clam shell",
-              "targeting": "Isolation",
-              "lateral": "Unilateral",
-              "muscles": "abductors",
-              "dezzy": "Heavy band",
-              "noraa": "Medium Band",
-            }
-          ]
-        }
+        "Quad and glute": [
+          {
+            "name": "Goblet squat",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "quads, glutes",
+            "dezzy": "50lbs",
+            "noraa": "30lbs",
+          },
+          {
+            "name": "Kettlebell squat (Can also be done with DB)",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "quads, glutes",
+            "dezzy": "70lbs",
+            "noraa": "50lbs",
+          },
+          {
+            "name": "Off set squat",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "quads, glutes",
+            "note": "We haven't done these but will be good to add-in."
+          },
+          {
+            "name": "Sumo squat (also hits adductors)",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "quads, glutes, abductors",
+            "dezzy": "70lbs",
+            "noraa": "45lbs",
+          },
+          {
+            "name": "Bulgarian split squat",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "quads, glutes",
+            "dezzy": "60lbs (30s in each hand)",
+            "noraa": "24lbs (12s in each hand)",
+          },
+          {
+            "name": "Front foot elevated split squat",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "quads, glutes",
+            "note": "We haven't done these but will be good to add-in."
+          },
+          {
+            "name": "Reverse lunge",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "quads, glutes",
+            "dezzy": "50lbs (25lbs in each hand)",
+            "noraa": "25lbs",
+          },
+          {
+            "name": "Step up",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "quads, glutes",
+            "dezzy": "45lbs",
+            "noraa": "25lbs",
+          },
+          {
+            "name": "Side lunge (also hits adductors)",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "quads, glutes, adductors",
+            "dezzy": "50lbs",
+            "noraa": "35lbs",
+          }
+        ],
+        "Hamstring and glute": [
+          {
+            "name": "RDL",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "hamstrings, glutes",
+            "noraa": "50lbs (25s in each hand)",
+            "note": "Dezzy: Usually we do this with the trap bar. Experiment with lighter weight and high reps to see if you back will tolerate these at home."
+          },
+          {
+            "name": "Hip thrust",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "glutes, hamstrings",
+            "dezzy": "55lbs",
+            "noraa": "55lbs",
+            "note": "Dezzy: You can do more weight depending on how your back is feeling"
+          },
+          {
+            "name": "B-stance RDL",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "hamstrings, glutes",
+            "noraa": "30lbs",
+            "note": "Dezzy: Back doesn't like these usually but feel free to try light weight to see how it responds"
+          },
+          {
+            "name": "Single leg RDL",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "hamstrings, glutes",
+            "noraa": "25lbs",
+            "note": "Dezzy: Back doesn't like these usually but feel free to try light weight to see how it responds"
+          },
+          {
+            "name": "Single leg hip thrust",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "glutes, hamstrings",
+            "dezzy": "25lbs",
+            "noraa": "10lbs",
+          },
+          {
+            "name": "BOSU Hamstring curl",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "hamstrings",
+            "note": "Do higher reps with these"
+          }
+        ],
+        "Glute/Abductor": [
+          {
+            "name": "Monster walk",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "glutes",
+            "dezzy": "Heavy band",
+            "noraa": "Medium Band",
+          },
+          {
+            "name": "Banded lateral walk",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "abductors",
+            "dezzy": "Heavy band",
+            "noraa": "Medium Band",
+          },
+          {
+            "name": "Donkey Kicks",
+            "targeting": "Isolated",
+            "lateral": "Unilateral",
+            "muscles": "glutes",
+            "dezzy": "Haven't tried but probably heavy",
+            "noraa": "Haven't tried but probably medium",
+            "note": "https://www.youtube.com/watch?v=qegd159vy10"
+          },
+          {
+            "name": "Fire hydants",
+            "targeting": "Isolated",
+            "lateral": "Unilateral",
+            "muscles": "abductors",
+            "dezzy": "Haven't tried but probably heavy",
+            "noraa": "Haven't tried but probably medium",
+            "note": "https://www.youtube.com/watch?v=k6WI1adIiHM"
+          },
+          {
+            "name": "Clam shell",
+            "targeting": "Isolated",
+            "lateral": "Unilateral",
+            "muscles": "abductors",
+            "dezzy": "Heavy band",
+            "noraa": "Medium Band",
+          }
+        ]
       },
       "Upper": {
-        "Chest, Shoulders, Triceps": {
-          "compound": [
-            {
-              "exercise": "Chest press",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "chest, triceps, shoulders",
-              "dezzy": "45s in each hand",
-              "noraa": "30s in each hand",
-            },
-            {
-              "exercise": "Incline Chest press",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "chest, shoulders, triceps",
-              "dezzy": "35s in each hand",
-              "noraa": "20s in each hand",
-              "note": "@N: We haven't done these in a while, you might be able to do more weight"
-            },
-            {
-              "exercise": "Push ups",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "chest, triceps, shoulders",
-              "dezzy": "From toes",
-              "noraa": "From knees or bench for now",
-              "note": "You can add weight to your back to make these more fun ;)"
-            },
-            {
-              "exercise": "Shoulder press",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "shoulders, triceps",
-              "dezzy": "30s in each hand",
-              "noraa": "20s in each hand",
-            },
-            {
-              "exercise": "Standing or Floor seated shoulder press",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "shoulders, triceps (core if standing)",
-              "dezzy": "no",
-              "noraa": "15s in each hand",
-              "note": "Having no back support will work the core more"
-            },
-            {
-              "exercise": "Bench dips",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "triceps, chest, shoulders",
-              "note": "We usually do this on a machine, add weight to your lap to make more challanging. Make sure to keep you shoulders from shrugging up"
-            }
-          ],
-          "isolated": [
-            {
-              "exercise": "Chest fly",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "chest",
-              "dezzy": "15s in each hand",
-              "noraa": "10s in each hand",
-              "note": "We haven't done these with dumbbells in a while, you both might be able to do more"
-            },
-            {
-              "exercise": "Lateral raises",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "shoulders",
-              "dezzy": "12s in each hand",
-              "noraa": "8s in each hand",
-            },
-            {
-              "exercise": "Overhead tricep extension",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "triceps",
-              "note": "We haven't done these but will be good to add-in."
-            },
-            {
-              "exercise": "Skull Crusher",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "triceps",
-              "dezzy": "20lbs in each hand",
-              "noraa": "10lbs in each hand",
-            },
-            {
-              "exercise": "Seated reverse fly",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "shoulders",
-              "note": "New, Usually done with cables"
-            }
-          ]
-        },
-        "Back and Biceps": {
-          "compound": [
-            {
-              "exercise": "Single arm bent over row",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "back, lats, biceps",
-              "dezzy": "55lbs",
-              "noraa": "25lbs",
-              "note": "@D: We've done 55lbs but depending on how your back is feeling we go lighter. Make sure to engage your core to protect back."
-            },
-            {
-              "exercise": "Quadruped row",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "back, lats, biceps, core",
-              "dezzy": "Don't try this lol",
-              "noraa": "20lbs",
-              "note": "@N: This is the bent over row with the opposite leg lifted. Works on back, balance and core."
-            },
-            {
-              "exercise": "Chest supported row",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "back, lats, biceps",
-              "note": "We haven't done these but will be good to add-in. @D: These will be good because it will support your back and you might be able to go heavier"
-            },
-            {
-              "exercise": "Renegade row (also good for core)",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "back, lats, biceps, core",
-              "dezzy": "probably 15/20s",
-              "noraa": "probably 12/15s",
-              "note": "We haven't done these together"
-            }
-          ],
-          "isolated": [
-            {
-              "exercise": "Lat pull over",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "lats",
-              "note": "We usually do these with cables. Test out different weights and make sure to keep your arms straight"
-            },
-            {
-              "exercise": "Y's, T's, W's",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "shoulders, back, rotator cuff",
-              "dezzy": "Can hold little Dbs",
-              "noraa": "Can hold little Dbs",
-              "note": "Good to do at the beginning of a back day for mobility or at the end of a workout as a burnout/accesory movement"
-            },
-            {
-              "exercise": "Bicep curls",
-              "targeting": "Isolation",
-              "lateral": "Uni or Bilateral",
-              "muscles": "biceps",
-              "dezzy": "25s or 30s in each hand",
-              "noraa": "12s in each hand",
-            },
-            {
-              "exercise": "Hammer curls",
-              "targeting": "Isolation",
-              "lateral": "Uni or Bilateral",
-              "muscles": "biceps",
-              "dezzy": "25s or 30s in each hand",
-              "noraa": "12s in each hand",
-            },
-            {
-              "exercise": "Static bicep curl",
-              "targeting": "Isolation",
-              "lateral": "Uni or Bilateral",
-              "muscles": "biceps",
-              "dezzy": "20s in each hand",
-              "noraa": "10s in each hand",
-            }
-          ]
-        }
+        "Chest, Shoulders, Triceps": [
+          {
+            "name": "Chest press",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "chest, triceps, shoulders",
+            "dezzy": "45s in each hand",
+            "noraa": "30s in each hand",
+          },
+          {
+            "name": "Incline Chest press",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "chest, shoulders, triceps",
+            "dezzy": "35s in each hand",
+            "noraa": "20s in each hand",
+            "note": "Noraa: We haven't done these in a while, you might be able to do more weight"
+          },
+          {
+            "name": "Push ups",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "chest, triceps, shoulders",
+            "dezzy": "From toes",
+            "noraa": "From knees or bench for now",
+            "note": "You can add weight to your back to make these more fun ;)"
+          },
+          {
+            "name": "Chest fly",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "chest",
+            "dezzy": "15s in each hand",
+            "noraa": "10s in each hand",
+            "note": "We haven't done these with dumbbells in a while, you both might be able to do more"
+          },
+          {
+            "name": "Shoulder press",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "shoulders, triceps",
+            "dezzy": "30s in each hand",
+            "noraa": "20s in each hand",
+          },
+          {
+            "name": "Standing or Floor seated shoulder press",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "shoulders, triceps (core if standing)",
+            "dezzy": "no",
+            "noraa": "15s in each hand",
+            "note": "Having no back support will work the core more"
+          },
+          {
+            "name": "Lateral raises",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "shoulders",
+            "dezzy": "12s in each hand",
+            "noraa": "8s in each hand",
+          },
+          {
+            "name": "Overhead tricep extension",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "triceps",
+            "note": "We haven't done these but will be good to add-in."
+          },
+          {
+            "name": "Skull Crusher",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "triceps",
+            "dezzy": "20lbs in each hand",
+            "noraa": "10lbs in each hand",
+          },
+          {
+            "name": "Bench dips",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "triceps, chest, shoulders",
+            "note": "We usually do this on a machine, add weight to your lap to make more challanging. Make sure to keep you shoulders from shrugging up"
+          },
+          {
+            "name": "Seated reverse fly",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "shoulders",
+            "note": "New, Usually done with cables"
+          }
+        ],
+        "Back and Biceps": [
+          {
+            "name": "Single arm bent over row",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "back, lats, biceps",
+            "dezzy": "55lbs",
+            "noraa": "25lbs",
+            "note": "Dezzy: We've done 55lbs but depending on how your back is feeling we go lighter. Make sure to engage your core to protect back."
+          },
+          {
+            "name": "Quadruped row",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "back, lats, biceps, core",
+            "dezzy": "Don't try this lol",
+            "noraa": "20lbs",
+            "note": "Noraa: This is the bent over row with the opposite leg lifted. Works on back, balance and core."
+          },
+          {
+            "name": "Chest supported row",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "back, lats, biceps",
+            "note": "We haven't done these but will be good to add-in. Dezzy: These will be good because it will support your back and you might be able to go heavier"
+          },
+          {
+            "name": "Lat pull over",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "lats",
+            "note": "We usually do these with cables. Test out different weights and make sure to keep your arms straight"
+          },
+          {
+            "name": "Y's, T's, W's",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "shoulders, back, rotator cuff",
+            "dezzy": "Can hold little Dbs",
+            "noraa": "Can hold little Dbs",
+            "note": "Good to do at the beginning of a back day for mobility or at the end of a workout as a burnout/accessory movement"
+          },
+          {
+            "name": "Bicep curls",
+            "targeting": "Isolated",
+            "lateral": "Uni or Bilateral",
+            "muscles": "biceps",
+            "dezzy": "25s or 30s in each hand",
+            "noraa": "12s in each hand",
+          },
+          {
+            "name": "Hammer curls",
+            "targeting": "Isolated",
+            "lateral": "Uni or Bilateral",
+            "muscles": "biceps",
+            "dezzy": "25s or 30s in each hand",
+            "noraa": "12s in each hand",
+          },
+          {
+            "name": "Static bicep curl",
+            "targeting": "Isolated",
+            "lateral": "Uni or Bilateral",
+            "muscles": "biceps",
+            "dezzy": "20s in each hand",
+            "noraa": "10s in each hand",
+          },
+          {
+            "name": "Renegade row (also good for core)",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "back, lats, biceps, core",
+            "dezzy": "probablt 15/20s",
+            "noraa": "probably 12/15s",
+            "note": "We haven't done these together"
+          }
+        ]
       },
       "Core": {
-        "All": {
-          "compound": [
-            {
-              "exercise": "Deadbugs (can also be weighted)",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "lower abs, deep core",
-              "dezzy": "Yes",
-              "noraa": "Bodyweight or 12lbs",
-              "note": "Deep Core Stability → Focuses on resisting movement, engaging the innermost core muscles (transverse abdominis, obliques, and spinal stabilizers)"
-            },
-            {
-              "exercise": "Plank",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "deep core",
-              "dezzy": "Maybe 30 sec at a time",
-              "noraa": "Longest time: 1 min.",
-              "note": "Deep Core → Involves all major core muscles (upper abs, lower abs, obliques, transverse abdominis, and sometimes spinal stabilizers) working together."
-            },
-            {
-              "exercise": "Bear hold",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "deep core",
-              "dezzy": "Yes",
-              "noraa": "Longest time: 50 sec.",
-              "note": "Core Isolation → Targets a specific part of the core (upper abs, lower abs, or obliques) through controlled movement."
-            },
-            {
-              "exercise": "Bear hold pull through",
-              "targeting": "Compound",
-              "lateral": "Unilateral",
-              "muscles": "core (abs, obliques), shoulders",
-              "dezzy": "YES! 25lbs",
-              "noraa": "Try sometime :)",
-            },
-            {
-              "exercise": "Coppenhagen plank (good for adductors)",
-              "targeting": "Compound",
-              "lateral": "Bilateral",
-              "muscles": "obliques, adductors, deep core",
-              "dezzy": "probably not",
-              "noraa": "try",
-              "note": "https://www.youtube.com/watch?v=HRYTyez2e4k"
-            }
-          ],
-          "isolated": [
-            {
-              "exercise": "DB rotations",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "obliques, deep core (rotational strength)",
-              "dezzy": "Try",
-              "noraa": "Try",
-              "note": "https://www.youtube.com/watch?v=-zUQZUdJ7Sg"
-            },
-            {
-              "exercise": "Weighted SL lowers",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "lower abs",
-              "dezzy": "Maybe? Try",
-              "noraa": "20lbs",
-              "note": "https://www.youtube.com/watch?v=B8D7TVdcRvI"
-            },
-            {
-              "exercise": "Alternating V-Up",
-              "targeting": "Isolation",
-              "lateral": "Unilateral",
-              "muscles": "abs",
-              "dezzy": "yes",
-              "noraa": "Bodyweight",
-            },
-            {
-              "exercise": "V-up",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "abs",
-              "dezzy": "probably not",
-              "noraa": "Bodyweight",
-            },
-            {
-              "exercise": "Russian twist",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "obliques, deep core (rotational strength)",
-              "dezzy": "no",
-              "noraa": "12lbs",
-            },
-            {
-              "exercise": "Overhead weighted sit up",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "upper abs",
-              "dezzy": "no",
-              "noraa": "10lbs",
-            },
-            {
-              "exercise": "Toe Reaches",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "upper abs",
-              "dezzy": "no",
-              "noraa": "10lbs",
-            },
-            {
-              "exercise": "Side plank twist",
-              "targeting": "Isolation",
-              "lateral": "Bilateral",
-              "muscles": "obliques, deep core (rotational strength)",
-              "dezzy": "no",
-              "noraa": "5lbs",
-            }
-          ]
-        }
+        "All": [
+          {
+            "name": "Deadbugs (can also be weighted)",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "lower abs, deep core",
+            "dezzy": "Yes",
+            "noraa": "Bodyweight or 12lbs",
+            "note": "Deep Core Stability → Focuses on resisting movement, engaging the innermost core muscles (transverse abdominis, obliques, and spinal stabilizers)"
+          },
+          {
+            "name": "Plank",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "deep core",
+            "dezzy": "Maybe 30 sec at a time",
+            "noraa": "Longest time: 1 min.",
+            "note": "Deep Core → Involves all major core muscles (upper abs, lower abs, obliques, transverse abdominis, and sometimes spinal stabilizers) working together."
+          },
+          {
+            "name": "Bear hold",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "deep core",
+            "dezzy": "Yes",
+            "noraa": "Longest time: 50 sec.",
+            "note": "Core Isolated → Targets a specific part of the core (upper abs, lower abs, or obliques) through controlled movement."
+          },
+          {
+            "name": "Bear hold pull through",
+            "targeting": "Compound",
+            "lateral": "Unilateral",
+            "muscles": "core (abs, obliques), shoulders",
+            "dezzy": "YES! 25lbs",
+            "noraa": "Try sometime :)",
+          },
+          {
+            "name": "DB rotations",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "obliques, deep core (rotational strength)",
+            "dezzy": "Try",
+            "noraa": "Try",
+            "note": "https://www.youtube.com/watch?v=-zUQZUdJ7Sg"
+          },
+          {
+            "name": "Weighted SL lowers",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "lower abs",
+            "dezzy": "Maybe? Try",
+            "noraa": "20lbs",
+            "note": "https://www.youtube.com/watch?v=B8D7TVdcRvI"
+          },
+          {
+            "name": "Alternating V-Up",
+            "targeting": "Isolated",
+            "lateral": "Unilateral",
+            "muscles": "abs",
+            "dezzy": "yes",
+            "noraa": "Bodyweight",
+          },
+          {
+            "name": "V-up",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "abs",
+            "dezzy": "probably not",
+            "noraa": "Bodyweight",
+          },
+          {
+            "name": "Russian twist",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "obliques, deep core (rotational strength)",
+            "dezzy": "no",
+            "noraa": "12lbs",
+          },
+          {
+            "name": "Overhead weighted sit up",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "upper abs",
+            "dezzy": "no",
+            "noraa": "10lbs",
+          },
+          {
+            "name": "Toe Reaches",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "upper abs",
+            "dezzy": "no",
+            "noraa": "10lbs",
+          },
+          {
+            "name": "Side plank twist",
+            "targeting": "Isolated",
+            "lateral": "Bilateral",
+            "muscles": "obliques, deep core (rotational strength)",
+            "dezzy": "no",
+            "noraa": "5lbs",
+          },
+          {
+            "name": "Copenhagen plank (good for adductors)",
+            "targeting": "Compound",
+            "lateral": "Bilateral",
+            "muscles": "obliques, adductors, deep core",
+            "dezzy": "probably not",
+            "noraa": "try",
+            "note": "https://www.youtube.com/watch?v=HRYTyez2e4k"
+          }
+        ]
       }
     }
     // endregion
@@ -565,14 +545,19 @@
       return limit ? copy.slice(0, limit) : copy
     }
 
-    function getTwoExercises(dateShuffle, bodyGroup) {
-      // Randomly select a category from the body group
-      const category = dateShuffle(Object.values(bodyGroup), 1)[0]
-      let { compound, isolated } = category
-      // If we have both compound and isolated, take one of each. Otherwise, take two of one.
-      if (!compound) return dateShuffle(isolated, 2)
-      if (!isolated) return dateShuffle(compound, 2)
-      return [...dateShuffle(compound, 1), ...dateShuffle(isolated, 1)];
+    const isCompound = ex => ex.targeting === "Compound"
+
+
+    function getTwoExercises(dateShuffle, category) {
+      // Shuffle the body group category and select first two
+      const exercises = dateShuffle(category, 2)
+
+      // If neither is compound, look for a compound to inject
+      if (!exercises.find(isCompound)) {
+        const compoundExercise = dateShuffle(category).find(isCompound)
+        if (compoundExercise) exercises[0] = compoundExercise
+      }
+      return exercises
     }
 
     /**
@@ -583,11 +568,12 @@
       const dateShuffle = getDateShuffle(date)
 
       const bodyGroup = isLowerDay ? "Lower" : "Upper"
-      const isCompound = ex => ex.targeting === "Compound"
+
+      const categories = dateShuffle(Object.values(EXERCISES[bodyGroup]), 2)
       const workout = [
-        ...getTwoExercises(dateShuffle, EXERCISES[bodyGroup]),
-        ...getTwoExercises(dateShuffle, EXERCISES[bodyGroup]),
-        ...getTwoExercises(dateShuffle, EXERCISES["Core"]),
+        ...getTwoExercises(dateShuffle, categories[0]),
+        ...getTwoExercises(dateShuffle, categories[1]),
+        ...getTwoExercises(dateShuffle, EXERCISES["Core"]["All"]),
       ].sort((a,b) => isCompound(b) - isCompound(a))
 
       return workout.map(ex => {
@@ -612,7 +598,7 @@
         if (ex.noraa) notes.push(`Noraa: ${ex.noraa}`)
 
         return {
-          name: ex.exercise,
+          name: ex.name,
           type: ex.type,
           sets: sets,
           reps: repsRange,
