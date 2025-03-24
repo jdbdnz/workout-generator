@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Daily Workout</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
@@ -13,28 +13,44 @@
     window.dayjs = dayjs;
   </script>
 </head>
-<body class="bg-gray-100 p-8">
-<div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-  <div class="flex flex-col p-4 space-y-4">
-    <h2 id="currentDate" class="text-2xl font-semibold text-center"></h2>
-    <ul id="workoutList" class="list-disc pl-5"></ul>
-    <div class="flex justify-between items-center mb-4">
-      <button id="prevDay" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Previous Day
-      </button>
-      <button id="todayButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-        Today
-      </button>
-      <button id="nextDay" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Next Day
-      </button>
-    </div>
+<body class="bg-gray-900 p-2 md:p-8 flex flex-col" style="min-height: calc(100vh + 54px);">
+<div class="flex-grow mx-auto bg-white rounded-xl shadow-md w-full max-w-md md:max-w-2xl flex flex-col p-4 space-y-6">
+  <h1 class="font-semibold flex flex-col items-center">
+    <span id="currentDay" class="text-lg"></span>
+    <span id="currentDate" class="text-sm"></span>
+  </h1>
+
+  <ul id="workoutList" class="pl-5 space-y-2 flex-grow flex flex-col justify-around"></ul>
+  <div class="flex space-x-2 items-center">
+    <button id="prevDay" class="flex-grow bg-green-300 hover:bg-green-500 text-gray-700 font-bold py-2 px-4 rounded">
+      ❮
+    </button>
+    <button id="todayButton"
+            class="flex-grow bg-green-400 hover:bg-green-600 text-gray-700 font-bold py-2 px-4 rounded">
+      Today
+    </button>
+    <button id="nextDay" class="flex-grow bg-green-300 hover:bg-green-500 text-gray-700 font-bold py-2 px-4 rounded">
+      ❯
+    </button>
+  </div>
+</div>
+<div class="flex flex-col space-y-1 items-stretch mt-2">
+  <p class="text-xs font-semibold text-white">Override</p>
+  <div class="flex space-x-2">
+    <button id="armsDay"
+            class="flex-grow text-sm flex-grow bg-amber-200 hover:bg-amber-300 text-gray-700 font-bold py-1 px-2 rounded">
+      Arms
+    </button>
+    <button id="legsDay"
+            class="flex-grow text-sm flex-grow bg-amber-200 hover:bg-amber-300 text-gray-700 font-bold py-1 px-2 rounded">
+      Legs
+    </button>
   </div>
 </div>
 
 <script>
+  // region Workout logic
   (function () {
-    // region Workout logic
 
     /**
      * All available exercises (simplified).
@@ -229,11 +245,13 @@
      * Main function to generate a workout for a given date.
      * Exports an array of exercise objects with sets/reps recommended.
      */
-    function getWorkoutByDate(date) {
+    function getWorkoutByDate(date, isLowerDay = null) {
       // 1) Determine if it's "Upper Body" day or "Lower Body" day.
       //    Simplistic approach: Even day of month => Lower, Odd day of month => Upper
-      const dayOfMonth = date.getDate();
-      const isLowerDay = (dayOfMonth % 2 === 0);
+      if (isLowerDay === null) {
+        const dayOfMonth = date.getDate();
+        isLowerDay = dayOfMonth % 2 === 0;
+      }
 
       // 2) Convert date to a seed for consistent RNG.
       const seed = createSeedFromDate(date);
@@ -365,36 +383,88 @@
   })();
   // endregion
 
-  // region Website logic
-  let currentDate = dayjs();
 
-  function updateWorkout() {
-    const workout = getWorkoutByDate(currentDate.toDate());
+  // region Website logic
+  const [SUN, MON, TUES, WED, THURS, FRI, SAT] = [0, 1, 2, 3, 4, 5, 6]
+
+  let currentDate = dayjs();
+  let dayOfWeek, isLowerDay, isUpperDay, isYogaDay, isDayOff
+
+  const resetDay = () => {
+    dayOfWeek = currentDate.day()
+    isLowerDay = [TUES, FRI].includes(dayOfWeek)
+    isUpperDay = [MON, THURS].includes(dayOfWeek)
+    isYogaDay = dayOfWeek === WED
+    isDayOff = [SAT, SUN].includes(dayOfWeek)
+  }
+  resetDay()
+
+  const suggestedAlt = () => {
+    if (isDayOff) return "Rest"
+    if (isYogaDay) return "Yoga"
+  }
+
+  function updateWorkout({arms = false, legs = false} = {}) {
+    let workout
+    if (arms || isUpperDay) {
+      workout = getWorkoutByDate(currentDate.toDate(), false);
+    } else if (legs || isLowerDay) {
+      workout = getWorkoutByDate(currentDate.toDate(), true);
+    }
     const workoutList = document.getElementById('workoutList');
     workoutList.innerHTML = '';
-    workout.forEach(exercise => {
+    if (workout) {
+      workout.forEach(exercise => {
+        console.log('- ', JSON.stringify(exercise, null, 2));
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <strong>${exercise.name}</strong> - ${exercise.sets} sets of ${exercise.reps} reps
+          <br>
+          <span class="text-sm text-gray-600">
+            Type: ${exercise.type},
+            ${exercise.unilateral ? 'Unilateral' : 'Bilateral'},
+            Muscles: ${exercise.primaryMuscles.join(', ')}
+          </span>
+        `;
+        workoutList.appendChild(li);
+      });
+    } else if (suggestedAlt()) {
       const li = document.createElement('li');
-      li.textContent = `${exercise.name} - ${exercise.sets} sets of ${exercise.reps} reps`;
-      li.className = 'mb-2';
+      li.className = 'flex-grow flex items-center justify-center'
+      li.innerHTML = `<p class="text-md font-medium">${suggestedAlt()} Day</p>`;
       workoutList.appendChild(li);
-    });
-    document.getElementById('currentDate').textContent = currentDate.format('MMMM D, YYYY');
+    }
+
+    document.getElementById('currentDay').textContent = currentDate.format('dddd');
+    document.getElementById('currentDate').textContent = currentDate.format('MMM D');
   }
 
   document.getElementById('prevDay').addEventListener('click', () => {
     currentDate = currentDate.subtract(1, 'day');
+    resetDay()
     updateWorkout();
   });
 
   document.getElementById('nextDay').addEventListener('click', () => {
     currentDate = currentDate.add(1, 'day');
+    resetDay()
     updateWorkout();
   });
 
   document.getElementById('todayButton').addEventListener('click', () => {
     currentDate = dayjs();
+    resetDay()
     updateWorkout();
   });
+
+  document.getElementById('armsDay').addEventListener('click', () => {
+    updateWorkout({arms: true});
+  });
+
+  document.getElementById('legsDay').addEventListener('click', () => {
+    updateWorkout({legs: true});
+  });
+
 
   updateWorkout();
   // endregion

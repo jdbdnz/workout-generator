@@ -34,6 +34,20 @@ describe('getWorkoutByDate', () => {
     }
   });
 
+  test('respects isLowerDay parameter', () => {
+    const date = new Date('2023-07-01'); // Assuming this would normally be an upper body day
+
+    // Force lower body workout
+    const lowerWorkout = getWorkoutByDate(date, true);
+    const lowerMuscles = lowerWorkout.flatMap(ex => ex.primaryMuscles);
+    expect(lowerMuscles.some(m => ['Quads', 'Hamstrings', 'Glutes'].includes(m))).toBe(true);
+
+    // Force upper body workout
+    const upperWorkout = getWorkoutByDate(date, false);
+    const upperMuscles = upperWorkout.flatMap(ex => ex.primaryMuscles);
+    expect(upperMuscles.some(m => ['Chest', 'Back', 'Shoulders'].includes(m))).toBe(true);
+  });
+
   test('returns a workout for a given date', () => {
     const date = new Date('2023-07-01'); // A specific date for consistent results
     const workout = getWorkoutByDate(date);
