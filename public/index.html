@@ -546,6 +546,7 @@
     }
 
     const isCompound = ex => ex.targeting === "Compound"
+    const compoundSort = (a,b) => isCompound(b) - isCompound(a)
 
 
     function getTwoExercises(dateShuffle, category) {
@@ -573,8 +574,8 @@
       const workout = [
         ...getTwoExercises(dateShuffle, categories[0]),
         ...getTwoExercises(dateShuffle, categories[1]),
-        ...getTwoExercises(dateShuffle, EXERCISES["Core"]["All"]),
-      ].sort((a,b) => isCompound(b) - isCompound(a))
+      ].sort(compoundSort)
+      workout.push(...getTwoExercises(dateShuffle, EXERCISES["Core"]["All"]).sort(compoundSort))
 
       return workout.map(ex => {
         let sets = 3;
